@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+	<title>Introduction to designer technics in CSS3</title>
+	<script></script>
+	<meta name="description" content="This document include some CSS3 effects">
+  <meta name="author" content="Kenneth Nordahl">
+	<link href='http://fonts.googleapis.com/css?family=Paytone+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/core.css">
+</head>
+<body>
+		<header>
+			<h1>Introduction to designer technics in CSS3</h1>
+		</header><!-- END header -->
+		<article>
+			<header>
+				<h1>Abstract</h1>
+				<p>A lot of the standards talked about and displayed in this document are still under development. You would have to use vendor prefix for some of the CSS declarations.</p>
+				<p>A vendor prefix is a browsers implantation of a standard or a work in progress standard.</p>
+				<pre>
+					<code>
+-webkit-something /* Webkit based browsers, Safari, Chrome, Safari on iOS, some of the new Blackberry stuff ++ */
+-moz-something /* Mozilla base brwosers, Firefox ++ */
+-o-something /* Opera */
+-khtml-something (not commonly used, cater for a very tiny percentage of the market)
+-ms-something /*Internet Explirer*/
+something /* Always end with the standard decleration without any prefix */
+					</code>
+				</pre>
+			</header>
+			<section id="font-face">
+				<h2>This header use the 'Paytone One' font</h2>
+				<p>This paragraph mixes it up a little bit with the use of the PT Sans font.</p>
+				<p>The fonts in this section is loaded from the <a href="http://www.google.com/webfonts">Google Web Fonts</a> directory.</p>
+				<pre>
+					<code>
+#font-face h1{
+	font-family: 'Paytone One', arial, serif;
+	font-size:2em;
+}
+	
+#font-face p{
+	h1 { font-family: 'PT Sans', arial, serif; }
+}
+					</code>
+					<p>See a full article about @font-face on <a href="http://kedano.net/development/font-face/">kedano.net</a></p>
+				</pre>
+			</section>
+			<section id="text-shadow">
+				<h2>Text shadow</h2>
+				<p><span class="flames">Flames</span></p>
+				<pre>
+					<code>
+	#text-shadow h1{
+		font-size:3em;
+	}
+					</code>
+				</pre>
+				
+				<p><span class="letterpress">This text has a letterpress effect</span></p>
+				<pre>
+					<code>
+-webkit-text-shadow:0px -1px 1px #222, 0px 1px 0px #666;
+-moz-text-shadow:0px -1px 1px #222, 0px 1px 0px #666;
+-o-text-shadow:0px -1px 1px #222, 0px 1px 0px #666;
+-ms-text-shadow:0px -1px 1px #222, 0px 1px 0px #666;
+text-shadow:0px -1px 1px #222, 0px 1px 0px #666;
+					</code>
+				</pre>
+				
+				<p><span class="vintage">This text has a vintage look</span></p>
+				<pre>
+					<code>
+-webkit-text-shadow: 3px 3px 0px #eee, 5px 5px 0px #707070;
+-moz-text-shadow: 3px 3px 0px #eee, 5px 5px 0px #707070;
+-o-text-shadow: 3px 3px 0px #eee, 5px 5px 0px #707070;
+-ms-text-shadow: 3px 3px 0px #eee, 5px 5px 0px #707070;
+text-shadow: 3px 3px 0px #eee, 5px 5px 0px #707070;
+					</code>
+				</pre>
+				
+				<p>More text effects on <a href="http://line25.com/articles/using-css-text-shadow-to-create-cool-text-effects">Line25</a></p>
+			</section>
+			<section id="box-shadow">
+				<h2>Box shadow</h2>
+				<p>This box has a red glow</p>
+				<pre>
+					<code id="box-shadow-outer">
+-webkit-box-shadow: 0 0 1em red;
+-moz-box-shadow: 0 0 1em red;
+-o-box-shadow: 0 0 1em red;
+-ms-box-shadow: 0 0 1em red;
+box-shadow: 0 0 1em red;
+					</code>
+				</pre>
+				<p>The following code box has a inset shadow</p>
+				<pre>
+					<code id="box-shadow-inner">
+-webkit-box-shadow:inset 0 0 .5em rgba(0,0,0,.7);
+-moz-box-shadow:inset 0 0 .5em rgba(0,0,0,.7);
+-o-box-shadow:inset 0 0 .5em rgba(0,0,0,.7);
+-ms-box-shadow:inset 0 0 .5em rgba(0,0,0,.7);
+box-shadow:inset 0 0 .5em rgba(0,0,0,.7);
+					</code>
+				</pre>
+				<p>The following code box has a offset shadow</p>
+				<pre>
+					<code id="box-shadow-offset">
+-webkit-box-shadow: 1em 1em 0 green;
+-moz-box-shadow: 1em 1em 0 green;
+-o-box-shadow: 1em 1em 0 green;
+-ms-box-shadow: 1em 1em 0 green;
+box-shadow: 1em 1em 0 green;
+					</code>
+				</pre>
+				<p>One important aspect of box-shadow is that it does not impact the size of the box.</p>
+			</section>
+			<section id="rounded-corners">
+				<h2>Border-radius</h2>
+				<p>The code box have large rounded corners</p>
+				<pre>
+					<code id="rounded-corners-all">
+-webkit-border-radius:2em;
+-moz-border-radius:2em;
+-o-border-radius:2em;
+-ms-border-radius:2em;
+border-radius:2em;
+					</code>
+				</pre>
+				<p>Box shadows can be tweeked into stuff like this by adjusting the specific corners</p>
+				<pre>
+					<code id="rounded-corners-tleft-bright">
+-webkit-border-top-left-radius:2em;
+-moz-border-top-left-radius:2em;
+-o-border-top-left-radius:2em;
+-ms-border-top-left-radius:2em;
+border-top-left-radius:2em;
+
+-webkit-border-bottom-right-radius:2em;
+-moz-border-bottom-right-radius:2em;
+-o-border-bottom-right-radius:2em;
+-ms-border-bottom-right-radius:2em;
+border-bottom-right-radius:2em;
+					</code>
+				</pre>				
+				
+				<p>Or you can even adjust each side of the corner into something like this</p>
+
+				<pre>
+					<code id="rounded-corners-skew">
+-webkit-border-bottom-right-radius:10em 2em;
+-moz-border-bottom-right-radius:10em 2em;
+-o-border-bottom-right-radius:10em 2em;
+-ms-border-bottom-right-radius:10em 2em;
+border-bottom-right-radius:10em 2em;
+
+-webkit-border-top-left-radius:2em 10em;
+-moz-border-bottom-left-radius:2em 10em;
+-o-border-bottom-left-radius:2em 10em;
+-ms-border-bottom-left-radius:2em 10em;
+border-top-left-radius:2em 10em;
+					</code>
+				</pre>
+				<p>More realistic usage would be an effect like the one on each section on this page or the following example</p>
+				<pre>
+					<code id="rounded-corners-effect">
+-webkit-border-bottom-right-radius:10em 2em;
+-moz-border-bottom-right-radius:10em 2em;
+-o-border-bottom-right-radius:10em 2em;
+-ms-border-bottom-right-radius:10em 2em;
+border-bottom-right-radius:10em 2em;
+
+-webkit-border-bottom-left-radius:10em 2em;
+-moz-border-bottom-left-radius:10em 2em;
+-o-border-bottom-left-radius:10em 2em;
+-ms-border-bottom-left-radius:10em 2em;
+border-bottom-left-radius:10em 2em;
+					</code>
+				</pre>				
+			</section>
+			<section id="gradients">
+				<p>The following code box has a gradient background</p>
+				<pre>
+					<code id="linear-gradients">
+background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0, #eee),
+    color-stop(1, #aaa)
+);
+background-image: -webkit-linear-gradient(top, #eee, #aaa); 
+background-image: -moz-linear-gradient(top, #eee, #aaa);
+background-image: -o-linear-gradient(top, #eee, #aaa); 
+background-image: -ms-linear-gradient(top, #eee, #aaa); 
+background-image: linear-gradient(top, #eee, #aaa); 
+					</code>
+				</pre>
+				<pre id="radial-gradient">
+					<code>
+background-image: -webkit-gradient(
+    radial,
+    left top,
+    left bottom,
+    color-stop(0, rgb(137,74,217)),
+    color-stop(0.6, rgb(165,104,255)),
+    color-stop(1, rgb(198,136,255))
+);						
+
+background-image: -webkit-radial-gradient();
+					</code>
+				</pre>
+			</section>			
+						
+			<section id="before-after">
+				<h2>:before and :after selectors</h2>
+				<pre>
+					<code>
+
+					</code>
+				</pre>
+			</section>
+						
+			<section id="media-queries">
+				<p>Use media-queries to specify styling for certain screen sizes, resolutions, media types ++</p>
+				<pre>
+					<code>
+	@media screen and (max-device-width:320px){
+		body{width:96%}
+	}
+					</code>
+				</pre>
+			</section>
+		</article>
+		<footer>
+			<small>The "Mobile apps with web technologies" series by <a href="http://nordahl.me">Kenneth Nordahl</a> is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</small>
+		</footer>
+</body>
+</html>

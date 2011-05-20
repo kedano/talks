@@ -16,7 +16,7 @@
 		</header><!-- END header -->
 		<article>
 			<header>
-				<h1>Abstract</h1>
+				<h1>About</h1>
 				<p>A lot of the standards talked about and displayed in this document are still under development. You would have to use vendor prefix for some of the CSS declarations.</p>
 				<p>A vendor prefix is a browsers implantation of a standard or a work in progress standard.</p>
 				<pre>
@@ -181,6 +181,7 @@ border-bottom-left-radius:10em 2em;
 				</pre>				
 			</section>
 			<section id="gradients">
+				<h2>CSS gradients</h2>
 				<p>The following code box has a gradient background</p>
 				<pre>
 					<code id="linear-gradients">
@@ -198,18 +199,14 @@ background-image: -ms-linear-gradient(top, #eee, #aaa);
 background-image: linear-gradient(top, #eee, #aaa); 
 					</code>
 				</pre>
-				<pre id="radial-gradient">
-					<code>
-background-image: -webkit-gradient(
-    radial,
-    left top,
-    left bottom,
-    color-stop(0, rgb(137,74,217)),
-    color-stop(0.6, rgb(165,104,255)),
-    color-stop(1, rgb(198,136,255))
-);						
-
-background-image: -webkit-radial-gradient();
+				<pre>
+					<code id="radial-gradients">
+background-image: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#487a77), to(#fff));
+background-image: -webkit-radial-gradient(50% 50%, farthest-side, #487a77, #fff);
+background-image: -moz-radial-gradient(50% 50%, farthest-side, #487a77, #fff);
+background-image: -o-radial-gradient(50% 50%, farthest-side, #487a77, #fff);
+background-image: -ms-radial-gradient(50% 50%, farthest-side, #487a77, #fff);
+background-image: radial-gradient(50% 50%, farthest-side, #487a77, #fff);
 					</code>
 				</pre>
 			</section>			
@@ -218,18 +215,69 @@ background-image: -webkit-radial-gradient();
 				<h2>:before and :after selectors</h2>
 				<pre>
 					<code>
-
+#before-after code{
+	
+}
+#before-after code:before{
+	content="Hello world";
+	position:absolute;
+	top:-30px;
+}
+#before-after code:after{
+	content="";
+	display:block;
+	background:
+	width:60px;
+	height:60px;
+	position:absolute:
+	right:-20px;
+	top:30px;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
 					</code>
 				</pre>
 			</section>
+
+			<section id="transform">
+				<h2>Transform</h2>
+				<pre>
+					<code>
+/* Some awesome stuff is on its way in here. */
+					</code>
+				</pre>
+			</section>
+			
+			<section id="transitions">
+				<h2>Transitions</h2>
+				<pre>
+					<code>
+/* Some awesome stuff is on its way in here. */
+					</code>
+				</pre>
+			</section>
+			
+			
+			<section id="animations">
+				<h2>Animations</h2>
+				<pre>
+					<code>
+/* Some awesome stuff is on its way in here. */
+					</code>
+				</pre>
+			</section>			
 						
 			<section id="media-queries">
+				<h2>Media-queries</h2>
 				<p>Use media-queries to specify styling for certain screen sizes, resolutions, media types ++</p>
 				<pre>
 					<code>
-	@media screen and (max-device-width:320px){
-		body{width:96%}
-	}
+@media screen and (max-device-width:320px){
+	body{width:96%}
+}
 					</code>
 				</pre>
 			</section>

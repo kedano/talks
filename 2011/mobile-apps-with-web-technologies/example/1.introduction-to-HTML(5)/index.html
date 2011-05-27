@@ -1,68 +1,67 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Introduction to HTML(5)</title>
-<script type="text/javascript">
-	alert("Hello World!");
-</script>
-<style type="text/css">
-/* CSS does not matter at this point*/
-</style>
+	<meta charset="utf-8">
+	<title>Introduction to HTML(5)</title>
+	<link rel="stylesheet" href="css/core.css">
+	<link rel="stylesheet" href="css/600-and-up.css">
+	<script src="js/libs/modernizr-1.7.min.js"></script>
+	<script src="js/libs/respond.min.js"></script>
 </head>
 <body>
-	<div id="dPageHolder">
-		<div id="dHeader">
-			<img src="img/logo-griffith-university-qca.jpg" width="300px" height="64px" />
+	<div id="container" class="scalable">
+		<header class="grid_12-12">
 			<h1>Introduction to HTML(5)</h1>
-		</div><!-- END dHeader -->
-		<div id="dSubHeader">
+		</header>
+		<nav class="grid_12-12">
 			<ul>
 				<li><a href="#">Home</a></li>
 				<li><a href="#">Portfolio</a></li>
 				<li><a href="#">About</a></li>
 				<li><a href="#">Contact</a></li>
 			</ul>
-		</div><!-- END dSubHeader -->
-		<div id="dTorso">
-			<div id="dLeft">
-				<p>Some information might be posted here</p>
-			</div><!-- END dLeft -->
-			<div id="dMiddle">
-				<p class="cBold">Welcome</p>
-				<h1><a href="#">This is a title</a></h1>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			</div><!-- END dMiddle -->
-			<div id="dRight">
-				<p>or the information will be posted on this side if the site.</p>
-			</div><!-- END dRight -->
-		</div><!-- END dTorso -->
-		<div id="dFooter">
+		</nav>
+		<section role="main">
+			<div class="grid_8-12">
+				<article>
+					<h1><a href="#">This example site works best in the latest Safari, Chrome or Opera</a></h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+				<article>
+					<h1><a href="#">This is the second article</a></h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+				<article>
+					<h1><a href="#">This is the third article</a></h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				</article>
+			</div>
+			<aside id="sidebar" class="grid_4-12">
+				<h1>About this blog</h1>
+				<p>This is a paragraph about the author of this blog</p>
+				<h2>Social Networks</h2>
+				<ul>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Gowalla</a></li>
+				</ul>
+			</aside>
+		</section>
+		<aside id="breadcrumb" class="grid_12-12 clearfix">
 			<ul>
 				<li><a href="" title="#">Breadcrumb first level</a></li>
 				<li><a href="" title="#">second level</a></li>
 				<li><a href="" title="#">third level</a></li>
 				<li><a href="" title="#">etc.</a></li>
 			</ul>
-		</div><!-- END dFooter -->
-		<div id="dSubFooter">
-			<div id="dLeft">
-				<p>Copyright information</p>
-			</div>
-			<div id="dMiddle">
-				<p>Sitemap</p>
-			</div>
-			<div id="dRight">
-				<p>Some more information</p>
-			</div>
-		</div><!-- END dSubFooter -->
-		<div id="dLeftWing">
-			<p>Left Wing</p>
-		</div><!-- END dLeftWing -->
-		<div id="dRightWing">
-			<p>Right Wing</p>
-		</div><!-- END dRightWing -->
-	</div><!-- END dPageHolder -->
-	<div class="dClear">&nbsp;</div>
+		</aside>
+		<footer class="grid_12-12 clearfix">
+			<small>Mobile apps with web technologies by <a href="http://nordahl.me">Kenneth Nordahl</a> is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</small>
+		</footer>
+	</div>
 </body>
 </html>

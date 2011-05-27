@@ -1,0 +1,129 @@
+/*
+  html5doctor.com reset stylesheet (eric meyer's reset reloaded + html5 baseline)
+  v1.6.1 2010-09-17 | authors: eric meyer & richard clark
+  html5doctor.com/html-5-reset-stylesheet/
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+margin:0;padding:0;border:0;font-size:100%;font: inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {display:block;}
+blockquote, q { quotes:none; }
+blockquote:before, blockquote:after,
+q:before, q:after { content:''; content:none; }
+ins { background-color:#ff9; color:#000; text-decoration:none; }
+mark { background-color:#ff9; color:#000; font-style:italic; font-weight:bold; }
+del { text-decoration: line-through; }
+abbr[title], dfn[title] { border-bottom:1px dotted; cursor:help; }
+table { border-collapse:collapse; border-spacing:0; }
+hr { display:block; height:1px; border:0; border-top:1px solid #ccc; margin:1em 0; padding:0; }
+input, select { vertical-align:middle; }
+/* end reset css */
+
+/* start 12-grid-system */
+.scalable{margin-left:auto;margin-right:auto;min-width: 26em; max-width: 60em;position: relative;}
+	/*Reset margin on nested grids*/
+	.grid_first{margin-left:0;}.grid_last{margin-right:0;}
+.grid_12-12,.grid_11-12,.grid_10-12,.grid_9-12,.grid_8-12,.grid_7-12,.grid_6-12,.grid_5-12,.grid_4-12,.grid_3-12,.grid_2-12,.grid_1-12 {
+  display: inline;float: left;position: relative;margin-left: 2%;margin-right: 2%;}
+.scalable .grid_12-12,.scalable .grid_11-12,.scalable .grid_10-12,.scalable .grid_9-12,.scalable .grid_8-12,.scalable .grid_7-12,.scalable .grid_6-12,.scalable .grid_5-12,.scalable .grid_4-12,.scalable .grid_3-12,.scalable .grid_2-12,.scalable .grid_1-12 {
+  width: 96%;-webkit-transition:width 1s ease;}
+/* push grids */
+.scalable .grid-push_11-12,.scalable .grid-push_10-12,.scalable .grid-push_9-12,.scalable .grid-push_8-12,.scalable .grid-push_7-12,.scalable .grid-push_6-12,.scalable .grid-push_5-12,.scalable .grid-push_4-12,.scalable .grid-push_3-12,.scalable .grid-push_2-12,.scalable .grid-push_1-12 {
+  margin-left: 2%;}
+/* pull grids */
+.scalable .grid-pull_11-12,.scalable .grid-pull_10-12,.scalable .grid-pull_9-12,.scalable .grid-pull_8-12,.scalable .grid-pull_7-12,.scalable .grid-pull_6-12,.scalable .grid-pull_5-12,.scalable .grid-pull_4-12,.scalable .grid-pull_3-12,.scalable .grid-pull_2-12,.scalable .grid-pull_1-12 {
+  margin-left: 2%;}
+/*set content like images,flash & video to fill the width of the grid if the content width is larger than grid width*/
+img, object, video {  max-width: 100%;}
+/* end 12-grid-system */
+
+
+
+
+/* Fluid (mobile) styles
+   Author: Kenneth Nordahl
+*/
+
+/* font normalization inspired by  from the YUI Library's fonts.css: developer.yahoo.com/yui/ */
+body { font:12px/1.231 sans-serif; *font-size:small; }
+select, input, textarea, button { font:99% sans-serif; }
+pre, code, kbd, samp { font-family: monospace, sans-serif; }
+
+/* TOOLS */
+.ir { display: block; text-indent: -999em; overflow: hidden; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.hidden { display: none; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: "\0020"; display: block; height: 0; visibility: hidden; }
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
+
+
+body{background-image:-webkit-linear-gradient(top, #eee, #aaa);background-attachment:fixed;color:#777;}
+	a{color:rgba(0,0,0,.6);text-decoration:none;}
+	a:hover{text-decoration:underline;}
+	h1,h2,h3{color:rgba(0,0,0,.6);font-weight:bold;}
+	header{position:relative;margin:2em 0;}
+		header > h1{display:block;height:4em;background: #fff url("../img/logo-griffith-university-qca-300x64.png") no-repeat top right;line-height:6em;padding-left:1em;padding-bottom:1.5em;border-radius:.3em;border:1px solid rgba(0,0,0,.2);}
+		header > h1:after{content:"";display:block;position:absolute;top:0;left:50%;width:1px;height:100%;background:rgba(0,0,0,.2);}
+	nav{background:#fff;border-radius:.3em;border:1px solid rgba(0,0,0,.2);}
+		nav ul{}
+			nav li{list-style:none;float:left;}
+			nav li a{display:block;padding:1em 1.5em;text-align:center;}
+				nav li a:hover{background:rgba(0,0,0,.6);color:rgba(255,255,255,.9);}
+					nav ul li:first-child{border-top-left-radius:.3em;border-bottom-left-radius:.3em;}
+					nav ul li:last-child{border-top-right-radius:.3em;border-bottom-right-radius:.3em;}
+
+	article{background:#fff;border-radius:.3em;border:1px solid rgba(0,0,0,.2);margin: 2em 0;padding:1.5em;}
+		article h1{font-size:1.2em;line-height:1.5em;text-transform:uppercase;font-weight:bold;}
+		article p{margin-bottom:1em;}
+	
+	#sidebar{margin: 2em 0;}
+		#sidebar h2{margin-top:1em;margin-bottom:-1em;}
+		#sidebar ul{background:#fff;border-radius:.3em;border:1px solid rgba(0,0,0,.2);margin:2em 0;}
+		#sidebar ul li{list-style:none;}
+		#sidebar ul li a{display:block;padding:1em 0;padding:1em 1.5em;}
+			#sidebar ul li a:hover{background:rgba(0,0,0,.6);color:rgba(255,255,255,.9);text-decoration:none;}
+
+	#breadcrumb{background:#fff;border-radius:.3em;border:1px solid rgba(0,0,0,.2);}
+		#breadcrumb ul{}
+			#breadcrumb li{list-style:none;float:left;}
+			#breadcrumb li a{display:block;padding:1em 1.5em;text-align:center;}
+				#breadcrumb li a:hover{background:rgba(0,0,0,.6);color:rgba(255,255,255,.9);text-decoration:none;}
+		
+	footer{text-transform:uppercase;font-size:80%;margin-top:3em;line-height:3em;color:rgba(0,0,0,.1);text-shadow:0 -1px 0 rgba(0,0,0,.6),0 1px 0 rgba(255,255,255,.3);}
+	
+/* NOTE: You should use the media queries here as a starting reference and then move the code to the seperate files for faster loading on each accessing platform */
+
+@media all and (orientation:portrait) {
+  /* style adjustments for portrait mode goes here */
+
+}
+
+@media all and (orientation:landscape) {
+  /* style adjustments for landscape mode goes here */
+
+}
+@media screen and (min-width: 600px) {
+	/* Styling of the desktop experience of your website goes here */
+
+}
+
+@media 	screen and (orientation:portrait), 
+				screen and (min-device-width: 700px), 
+				screen and (max-device-width: 1000px) {
+	/* Styling for tablet in portrait orientation goes here */
+}
+@media 	screen and (orientation:landscape), 
+				screen and (min-device-width: 1000px), 
+				screen and (max-device-width: 1300px) {
+	/* Styling for tablet in landscape orientation goes here */
+}

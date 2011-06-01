@@ -1,3 +1,5 @@
 # Todo application
 
-Note: More information about the application on May 27th.
+Check the source code on version 0.0.2 and 0.0.3 for reference on how this application is build.
+
+The application utilise LocalStorage with JavaScript to store todo tasks locally.

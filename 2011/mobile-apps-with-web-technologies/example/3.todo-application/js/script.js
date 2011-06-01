@@ -7,13 +7,13 @@ $(document).ready(function() {
   
   // Initial loading of todos
   for( i = 0; i < localStorage.length; i++)
-    $("#todos").append("<li id='todo-"+ i +"'>" + localStorage.getItem('todo-'+i) + " <a href='#'>x</a></li>");
+    $("#todos").prepend("<li id='todo-"+ i +"'>" + localStorage.getItem('todo-'+i) + " <a href='#'>x</a></li>");
     
   // Add a todo
   $("#todos-form").submit(function() {
     if (  $("#todo").val() != "" ) {
       localStorage.setItem( "todo-"+i, $("#todo").val() );
-      $("#todos").append("<li id='todo-"+i+"'>"+localStorage.getItem("todo-"+i)+" <a href='#'>x</a></li>")
+      $("#todos").prepend("<li id='todo-"+i+"'>"+localStorage.getItem("todo-"+i)+" <a href='#'>x</a></li>")
       $("#todo-" + i).css('display', 'none');
       $("#todo-" + i).slideDown();
       $("#todo").val("");
